@@ -12,3 +12,9 @@ $(document.ready(function () {
     })
 
 }))
+
+/*
+1fetch van api (kan met axios)
+2data filteren (json terug -> variable)
+3tonen op pagina (variable in html pompen */
+// keep it stupid simple, stupid!!!
