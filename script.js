@@ -3,8 +3,8 @@
    let input = document.getElementById("input");
    let submit = document.getElementById("submitWeather");
 
-function calculateAverage(tepmeratures) {
-    let avgTemp = temperatures => Math.floor(((tepmeratures.reduce((a,b) => a + b, 0) / temperatures.length)));
+function calculateAverage(temperatures) {
+    return Math.floor(((temperatures.reduce((a,b) => a + b, 0) / temperatures.length)));
 }
    submit.addEventListener("click", function () {
       fetch('https://api.openweathermap.org/data/2.5/forecast?q='+input.value+'&units=metric&appid=e1e90a3c7a628db7d39dcee70ad79160')
@@ -14,7 +14,7 @@ function calculateAverage(tepmeratures) {
           })
 
           .then(data => {
-              console.log(data.list[0]);
+              //console.log(data.list[0]);
 
 
               let tempArr = [];
@@ -25,7 +25,8 @@ function calculateAverage(tepmeratures) {
                   descriptionArr.push(data.list[i].weather[0].description);
               }
 
-              //console.log(tempArr);
+
+
               //cut up temps in the 5 days
               let dayOne = tempArr.slice(0, 8);
               let dayTwo = tempArr.slice(0, 16);
@@ -64,6 +65,12 @@ function calculateAverage(tepmeratures) {
               day4descHTML.innerHTML = dayFourDescr[3];
               day5descHTML.innerHTML = dayFiveDescr[3];
 
+              day1tempHTML.innerHTML = dayOneTemp + " " + "&#8451";
+              day2tempHTML.innerHTML = dayTwoTemp + " " + "&#8451";
+              day3tempHTML.innerHTML = dayThreeTemp + " " + "&#8451";
+              day4tempHTML.innerHTML = dayFourTemp + " " + "&#8451";
+              day5tempHTML.innerHTML = dayFourTemp + " " + "&#8451";
+
 
 
               console.log(dayOneTemp);
@@ -83,7 +90,7 @@ function calculateAverage(tepmeratures) {
 
 
 /*
-1: fetch van api (kan met axios)
-2: data filteren (json terug -> variable)
-3: tonen op pagina (variable in html pompen */
-// keep it stupid simple, stupid!!!
+1: fetch van api (kan met axios) CHECK
+2: data filteren (json terug -> variable) CHECK
+3: tonen op pagina (variable in html pompen CHECK
+keep it stupid simple, stupid!!! */
