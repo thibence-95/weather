@@ -1,21 +1,25 @@
-(function () {
+
 
    let input = document.getElementById("input");
    let submit = document.getElementById("submitWeather");
 
 
    submit.addEventListener("click", function () {
-      fetch(e1e90a3c7a628db7d39dcee70ad79160)
+      fetch('https://api.openweathermap.org/data/2.5/forecast?q='+input.value+'&appid=e1e90a3c7a628db7d39dcee70ad79160')
 
           .then((response) => {
              return response.json()
           })
 
-          .then()
-   })
-    
+          .then(data => {
+              console.log(data);
 
-});
+              
+
+
+          })
+   });
+    
 
 
 
