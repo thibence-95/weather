@@ -4,7 +4,7 @@
    let submit = document.getElementById("submitWeather");
 
 function calculateAverage(tepmeratures) {
-    let avgTemp = arr => Math.floor(((arr.reduce((a,b) => a + b, 0) / arr.length)));
+    let avgTemp = temperatures => Math.floor(((tepmeratures.reduce((a,b) => a + b, 0) / temperatures.length)));
 }
    submit.addEventListener("click", function () {
       fetch('https://api.openweathermap.org/data/2.5/forecast?q='+input.value+'&units=metric&appid=e1e90a3c7a628db7d39dcee70ad79160')
@@ -33,7 +33,11 @@ function calculateAverage(tepmeratures) {
               let dayFour = tempArr.slice(24, 32);
               let dayFive = tempArr.slice(32, 40);
 
-              let dayOneTemp = calculateAverage();
+              let dayOneTemp = calculateAverage(dayOne);
+              let dayTwoTemp = calculateAverage(dayTwo);
+              let dayThreeTemp = calculateAverage(dayThree);
+              let dayFourTemp = calculateAverage(dayFour);
+              let dayFiveTemp= calculateAverage(dayFive);
 
 
               let dayOneDescr = descriptionArr.slice(0, 8);
@@ -54,11 +58,11 @@ function calculateAverage(tepmeratures) {
               let day4tempHTML = document.getElementById("temp4");
               let day5tempHTML = document.getElementById("temp5");
 
-              day1descHTML.innerHTML = dayOneDescr;
-              day2descHTML.innerHTML = dayTwoDescr;
-              day3descHTML.innerHTML = dayThreeDescr;
-              day4descHTML.innerHTML = dayFourDescr;
-              day5descHTML.innerHTML = dayFiveDescr;
+              day1descHTML.innerHTML = dayOneDescr[3];
+              day2descHTML.innerHTML = dayTwoDescr[3];
+              day3descHTML.innerHTML = dayThreeDescr[3];
+              day4descHTML.innerHTML = dayFourDescr[3];
+              day5descHTML.innerHTML = dayFiveDescr[3];
 
 
 
