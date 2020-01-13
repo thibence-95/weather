@@ -3,7 +3,9 @@
    let input = document.getElementById("input");
    let submit = document.getElementById("submitWeather");
 
-
+function calculateAverage(tepmeratures) {
+    let avgTemp = arr => Math.floor(((arr.reduce((a,b) => a + b, 0) / arr.length)));
+}
    submit.addEventListener("click", function () {
       fetch('https://api.openweathermap.org/data/2.5/forecast?q='+input.value+'&units=metric&appid=e1e90a3c7a628db7d39dcee70ad79160')
 
@@ -24,13 +26,15 @@
               }
 
               //console.log(tempArr);
-              let dayOneTemp = tempArr.slice(0, 8);
-              let dayTwoTemp = tempArr.slice(0, 16);
-              let dayThreeTemp = tempArr.slice(16, 24);
-              let dayFourTemp = tempArr.slice(24, 32);
-              let dayFiveTemp = tempArr.slice(32, 40);
+              //cut up temps in the 5 days
+              let dayOne = tempArr.slice(0, 8);
+              let dayTwo = tempArr.slice(0, 16);
+              let dayThree = tempArr.slice(16, 24);
+              let dayFour = tempArr.slice(24, 32);
+              let dayFive = tempArr.slice(32, 40);
 
-              let avgTemp = arr => Math.floor(((arr.reduce((a,b) => a + b, 0) / arr.length)));
+              let dayOneTemp = calculateAverage();
+
 
               let dayOneDescr = descriptionArr.slice(0, 8);
               let dayTwoDescr = descriptionArr.slice(0, 16);
