@@ -59,6 +59,32 @@ function calculateAverage(temperatures) {
               let day4tempHTML = document.getElementById("temp4");
               let day5tempHTML = document.getElementById("temp5");
 
+              //getting dates
+              let currentDay = new Date().getDay();
+              let date1 = [];
+              let date2 = [];
+              let date3 = [];
+              let date4 = [];
+              let date5 = [];
+
+              for (let i = 0; i < 40; i++) {
+                  onlydates = new Date(data.list[i].dt * 1000).getDay();
+              }
+
+
+
+              /*let day3 = dates.getDay() + 2;
+              let day4 = dates.getDay() + 3;
+              let day5 = dates.getDay() + 4;
+
+              let dates = new Date();
+
+              document.getElementById("today").innerHTML = "Today";
+              document.getElementById("tomorrow").innerText = "Tomorrow";
+              document.getElementById("dayThree").innerHTML = day3;
+              document.getElementById("dayFour").innerHTML = day4;
+              document.getElementById("dayFive").innerHTML = day5;*/
+
               day1descHTML.innerHTML = dayOneDescr[3];
               day2descHTML.innerHTML = dayTwoDescr[3];
               day3descHTML.innerHTML = dayThreeDescr[3];
