@@ -63,6 +63,15 @@ function calculateAverage(temperatures) {
 
               //getting dates
 
+              let toDay = new Date();
+              let weekdays = new Array(7);
+              weekdays[0] = "Sunday";
+              weekdays[1] = "Monday";
+              weekdays[2] = "Tuesday";
+              weekdays[3] = "Wednesday";
+              weekdays[4] = "Thursday";
+              weekdays[5] = "Friday";
+              weekdays[6] = "Saturday";
 
               /*let today = new Date().getDay();
               let date1 = [];
@@ -120,11 +129,11 @@ function calculateAverage(temperatures) {
 
               let dates = new Date();*/
 
-              document.getElementById("today").innerHTML = "Today";
-              document.getElementById("dayTwo").innerText = "Tomorrow";
-              /*document.getElementById("dayThree").innerHTML = day3;
-              document.getElementById("dayFour").innerHTML = day4;
-              document.getElementById("dayFive").innerHTML = day5;*/
+              document.getElementById("today").innerHTML = "today";
+              document.getElementById("dayTwo").innerText = "tomorrow";
+              document.getElementById("dayThree").innerHTML = "in two days";
+              document.getElementById("dayFour").innerHTML = "in three days";
+              document.getElementById("dayFive").innerHTML = "in four days";
 
               day1descHTML.innerHTML = dayOneDescr[3];
               day2descHTML.innerHTML = dayTwoDescr[3];
