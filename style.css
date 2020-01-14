@@ -9,3 +9,6 @@
  #result {
      display: flex;
  }
+ #submit-output {
+     margin-top: 100px;
+ }

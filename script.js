@@ -26,6 +26,7 @@ function calculateAverage(temperatures) {
               }
 
 
+              document.getElementById("submit-output").innerHTML = input.value;
 
               //cut up temps in the 5 days
               let dayOne = tempArr.slice(0, 8);
@@ -59,7 +60,10 @@ function calculateAverage(temperatures) {
               let day4tempHTML = document.getElementById("temp4");
               let day5tempHTML = document.getElementById("temp5");
 
+
               //getting dates
+
+
               /*let today = new Date().getDay();
               let date1 = [];
               let date2 = [];
@@ -114,11 +118,11 @@ function calculateAverage(temperatures) {
               let day4 = dates.getDay() + 3;
               let day5 = dates.getDay() + 4;
 
-              let dates = new Date();
+              let dates = new Date();*/
 
               document.getElementById("today").innerHTML = "Today";
-              document.getElementById("tomorrow").innerText = "Tomorrow";
-              document.getElementById("dayThree").innerHTML = day3;
+              document.getElementById("dayTwo").innerText = "Tomorrow";
+              /*document.getElementById("dayThree").innerHTML = day3;
               document.getElementById("dayFour").innerHTML = day4;
               document.getElementById("dayFive").innerHTML = day5;*/
 
