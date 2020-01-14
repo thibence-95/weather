@@ -60,18 +60,55 @@ function calculateAverage(temperatures) {
               let day5tempHTML = document.getElementById("temp5");
 
               //getting dates
-              let currentDay = new Date().getDay();
+              /*let today = new Date().getDay();
               let date1 = [];
               let date2 = [];
               let date3 = [];
               let date4 = [];
               let date5 = [];
+              let onlydates;
 
               for (let i = 0; i < 40; i++) {
-                  onlydates = new Date(data.list[i].dt * 1000).getDay();
+                 onlydates = new Date(data.list[i].dt * 1000).getDay();
+
+                 if (today === onlydates) {
+                     date1.push(data.list[i]);
+                     if (today === 6) {
+                         today = 0;
+                     }
+                 }
+                  if (today + 1 === onlydates) {
+                      date1.push(data.list[i]);
+                      if (today === 6) {
+                          today = 0;
+                      }
+                  }
+                  if (today + 2 === onlydates) {
+                      date1.push(data.list[i]);
+                      if (today === 6) {
+                          today = 0;
+                      }
+                  }
+                  if (today + 3 === onlydates) {
+                      date1.push(data.list[i]);
+                      if (today === 6) {
+                          today = 0;
+                      }
+                  }
+                  if (today + 4 === onlydates) {
+                      date1.push(data.list[i]);
+                      if (today === 6) {
+                          today = 0;
+                      }
+                  }
+
               }
 
-
+              console.log(date1);
+              console.log(date2);
+              console.log(date3);
+              console.log(date4);
+              console.log(date5);*/
 
               /*let day3 = dates.getDay() + 2;
               let day4 = dates.getDay() + 3;
